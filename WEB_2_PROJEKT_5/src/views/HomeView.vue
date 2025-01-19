@@ -1,13 +1,7 @@
-<script setup>
-import Navbar from '@/components/Navbar.vue'
-</script>
+<script setup></script>
 
 <template>
   <main class="main">
-    <!--
-    <TheWelcome />
-    -->
-
     <p>Home page</p>
   </main>
 </template>
