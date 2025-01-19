@@ -3,6 +3,7 @@
     <div class="logo">Simply Furniture</div>
     <nav class="nav-links">
       <RouterLink to="/" class="nav-link">Home</RouterLink>
+      <RouterLink to="/products" class="nav-link">Products</RouterLink>
       <RouterLink to="/about" class="nav-link">About</RouterLink>
     </nav>
   </nav>

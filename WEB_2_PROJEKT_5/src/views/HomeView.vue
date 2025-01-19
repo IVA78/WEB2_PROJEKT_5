@@ -28,10 +28,10 @@
 }
 
 .hero {
-  background-image: url('../assets/images/home.jpg'); /* Put your image path here */
+  background-image: url('../assets/images/home.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Full-screen height */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@
 .welcome-text {
   text-align: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Prozirna pozadina za tekst */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 10px;
   width: 80%;

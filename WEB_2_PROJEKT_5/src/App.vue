@@ -18,7 +18,6 @@ import Navbar from './components/NavBar.vue'
 </template>
 
 <style scoped>
-/* Osnovni stilovi za layout */
 #app {
   display: flex;
   flex-direction: column;
@@ -34,14 +33,5 @@ main {
   flex: 1;
   padding: 1rem;
   background-color: #ffffff;
-}
-
-/* Stilovi za veće zaslone */
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 }
 </style>
