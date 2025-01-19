@@ -1,9 +1,19 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
-  <main>
+  <main class="main">
+    <!--
     <TheWelcome />
+    -->
+
+    <p>Home page</p>
   </main>
 </template>
+
+<style scoped>
+.main {
+  padding-top: 10%;
+}
+</style>
