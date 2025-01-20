@@ -1,9 +1,12 @@
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Products',
   data() {
     return {
-      products: [
+      products: [],
+      products2: [
         {
           id: 1,
           name: 'Modern Armchair',
@@ -66,6 +69,22 @@ export default {
           image: './images/furniture_10.jpg',
         },
       ],
+      loading: true,
+    }
+  },
+  async mounted() {
+    try {
+      const response = await axios.get(
+        'https://run.mocky.io/v3/5130ffac-96f2-46ea-8e9c-6e5c84b97245',
+      )
+
+      this.products = response.data
+
+      //console.log('response.data: ', response.data)
+    } catch (error) {
+      console.error('Greška pri dohvaćanju podataka:', error)
+    } finally {
+      this.loading = false
     }
   },
 }

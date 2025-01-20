@@ -10,12 +10,12 @@
 	    Komentar: Komponenta NavBar ima computed property pod nazivom  navbarClass koje izracunava vrijednosti koja klasa ce se dodijeliti navigacijskoj traci ovisno o stanju checkbox-a (isDarkMode), primjer: WEB_2_PROJEKT_5\src\components\NavBar.vue, linije 24-31
 	2.5 barem jedan scoped style: DA
 	    Komentar: Sve stranice i komponente imaju scoped style, konkretan primjer: WEB_2_PROJEKT_5\src\components\NavBar.vue, linije 18-66
-	2.6 koristiti barem jedan lifecycle hook
-	    Komentar:
-	2.7 routing (više stranica)
+	2.6 koristiti barem jedan lifecycle hook: DA
+	    Komentar: Na stranici ProductsView koristi se mounted() lifecycle hook koji služi za slanje asinkronog zahtjeva za podatcima nakon učitavanja stranice, primjer: WEB_2_PROJEKT_5\src\views\ProductsView.vue, linije 75-88
+	2.7 routing (više stranica): DA
 		2.7.1. aplikacija mora biti bookmarkable, tako da rade linkovi (ne samo na root, već i moj-web.com/stranica1, moj-web.com/stranica2)
 		2.7.2 dinamičko usmjeravanje s 404 stranicom ("catch all")
-	   Komentar:
+	   Komentar: probati putanju "/about" za provjeru rade li svi linkovi, a putanju "/blabla" ili bilo što drugo za 404 stranicu
 	2.8 (barem) dvije komponente
 	    Komentar:
 		2.8.1 komponenta bez stanja, koristiti properties
