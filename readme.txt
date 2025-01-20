@@ -37,7 +37,10 @@
                            Komponenta se nalazi na putanji WEB_2_PROJEKT_5\src\components\Hero.vue, 
                            props se postavlja u linijama 11-20 (pogledati i stranicu ProductsView.vue 
                            gdje se prosljedjuju properties - linije 36-39)
-               Komponenta
+               Komponenta NavBar ima stanje koje čuva u data() i zove se isDarkMode. isDarkMode predstavlja lokalno 
+                          stanje koje se mijenja unutar same komponente. To stanje se koristi za prebacivanje 
+                          između tamne i svijetle teme. Komponenta: WEB_2_PROJEKT_5\src\components\NavBar.vue
+                          linije 1-23
 	2.9 barem jedna komponenta mora emitirati barem jedan event
 	    Komentar:
 	2.10 store (Pinia): DA
