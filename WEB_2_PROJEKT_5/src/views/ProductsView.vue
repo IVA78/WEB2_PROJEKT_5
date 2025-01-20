@@ -1,81 +1,31 @@
 <script>
 import axios from 'axios'
+import Hero from '@/components/Hero.vue'
+import Cart from '@/components/Cart.vue'
+import { useCartStore } from '@/stores/cart'
 
 export default {
   name: 'Products',
+  components: {
+    Hero,
+    Cart,
+  },
   data() {
     return {
       products: [],
-      products2: [
-        {
-          id: 1,
-          name: 'Modern Armchair',
-          description: 'Comfortable and stylish armchair for your living room.',
-          image: './images/furniture_1.jpg',
-        },
-        {
-          id: 2,
-          name: 'Wooden Table',
-          description: 'Elegant wooden table for your bed room.',
-          image: './images/furniture_2.jpg',
-        },
-
-        {
-          id: 3,
-          name: 'Coffee Table',
-          description: 'Sleek and modern coffee table to complement your living room.',
-          image: './images/furniture_3.jpg',
-        },
-        {
-          id: 4,
-          name: 'Luxury Sofa',
-          description: 'Relax in comfort with this luxury sofa.',
-          image: './images/furniture_4.jpg',
-        },
-        {
-          id: 5,
-          name: 'Small Desk',
-          description: 'A small desk for your living room needs.',
-          image: './images/furniture_5.jpg',
-        },
-        {
-          id: 6,
-          name: 'Wooden desk',
-          description: 'A beautiful desk for your home.',
-          image: './images/furniture_6.jpg',
-        },
-        {
-          id: 7,
-          name: 'Cozy Sofa',
-          description: 'Cozy and stylish sofa for a good family time.',
-          image: './images/furniture_7.jpg',
-        },
-        {
-          id: 8,
-          name: 'Elegant Sofa',
-          description: 'Elegant and stylish sofa for your living room.',
-          image: './images/furniture_8.jpg',
-        },
-        {
-          id: 9,
-          name: 'Leather Sofa',
-          description: 'Functional and stylish sofa for any room.',
-          image: './images/furniture_9.jpg',
-        },
-        {
-          id: 10,
-          name: 'Table with Chairs',
-          description: 'Elegant and stylish dining table with set of chairs.',
-          image: './images/furniture_10.jpg',
-        },
-      ],
       loading: true,
     }
+  },
+  methods: {
+    addToCart(product) {
+      const cartStore = useCartStore()
+      cartStore.addToCart(product)
+    },
   },
   async mounted() {
     try {
       const response = await axios.get(
-        'https://run.mocky.io/v3/5130ffac-96f2-46ea-8e9c-6e5c84b97245',
+        'https://run.mocky.io/v3/8055e4b5-dab2-4bac-b914-196da811a7cd',
       )
 
       this.products = response.data
@@ -92,10 +42,10 @@ export default {
 
 <template>
   <main class="products-page">
-    <section class="hero">
-      <h3>Our Products</h3>
-      <p>Explore our wide selection of high-quality furniture pieces.</p>
-    </section>
+    <Hero
+      title="Our Products"
+      text="Explore our wide selection of high-quality furniture pieces."
+    />
 
     <section class="product-list">
       <div class="container">
@@ -104,32 +54,17 @@ export default {
           <img :src="product.image" :alt="product.name" />
           <h3>{{ product.name }}</h3>
           <p>{{ product.description }}</p>
-          <button>View Details</button>
+          <button @click="addToCart(product)">Add to Cart</button>
         </div>
       </div>
     </section>
+    <Cart />
   </main>
 </template>
 
 <style scoped>
 .products-page {
   margin-top: 2rem;
-}
-
-.hero {
-  background-color: #f5e1ce;
-  padding: 5%;
-  text-align: center;
-  margin-top: 5%;
-}
-
-.hero h3 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
 }
 
 .product-list {
@@ -141,7 +76,7 @@ export default {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1%;
   padding: 1%;
 }
