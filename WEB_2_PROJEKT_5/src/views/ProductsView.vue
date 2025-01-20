@@ -122,7 +122,7 @@ export default {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1%;
   padding: 1%;
 }
@@ -171,5 +171,11 @@ export default {
 
 .product-card:hover {
   transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>

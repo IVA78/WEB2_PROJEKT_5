@@ -54,12 +54,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'AboutUs',
-}
-</script>
-
 <style scoped>
 .about-us {
   padding: 10%;
