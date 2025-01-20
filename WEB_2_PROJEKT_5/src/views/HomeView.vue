@@ -91,7 +91,7 @@ const handleSubmit = () => {
 }
 
 .hero {
-  background-image: url('./images/home.jpg');
+  background-image: url('../../dist/images/home.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
