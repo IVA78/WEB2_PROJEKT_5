@@ -1,7 +1,7 @@
 <template>
   <div class="not-found">
     <h1>Sorry, page not found.</h1>
-    <p>Try going back to the <router-link to="/">homepage or use navigation bar.</router-link>.</p>
+    <p>Try going back to the <router-link to="/">homepage</router-link> or use navigation bar.</p>
     <img src="../../public/images/404-error.png" alt="404 Error" />
   </div>
 </template>
