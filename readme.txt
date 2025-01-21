@@ -1,4 +1,4 @@
-1. URL aplikacije:
+1. URL aplikacije: https://web2-projekt-5-fpsj.onrender.com
 2. Svojstva aplikacije
 	2.1 interpolation/one-way binding: DA
 	    Komentar: Komponenta ProductCard koristi {{ product.name }} (product prima preko props-a) za prikaz 
@@ -28,8 +28,6 @@
 		2.7.2 dinamičko usmjeravanje s 404 stranicom ("catch all")
 	   Komentar: probati putanju "/about" za provjeru rade li svi linkovi, 
                      a putanju "/blabla" ili bilo što drugo za 404 stranicu.
-                     Neophodno je bilo dodavanje _redirects file-a: 
-		     https://stackoverflow.com/questions/56853081/vue-router-not-working-once-production-is-built
 	2.8 (barem) dvije komponente
 		2.8.1 komponenta bez stanja, koristiti properties
 		2.8.2 komponenta sa stanjem
