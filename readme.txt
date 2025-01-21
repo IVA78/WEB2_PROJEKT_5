@@ -1,4 +1,4 @@
-1. URL aplikacije: https://web2-projekt-5-fpsj.onrender.com
+1. URL aplikacije: https://web2-projekt-5-deploy2.onrender.com
 2. Svojstva aplikacije
 	2.1 interpolation/one-way binding: DA
 	    Komentar: Komponenta ProductCard koristi {{ product.name }} (product prima preko props-a) za prikaz 
@@ -28,6 +28,10 @@
 		2.7.2 dinamičko usmjeravanje s 404 stranicom ("catch all")
 	   Komentar: probati putanju "/about" za provjeru rade li svi linkovi, 
                      a putanju "/blabla" ili bilo što drugo za 404 stranicu.
+                     Preduvjet da radi u produkcijskom načinu bio je postavljanje 
+                     Redirect and Rewrite Rules na Renderu (Source se postavi na /*,
+                     destination na /index.html, a Action na Redirect -> tako
+                     app zna sama hendlati zahtjeve)
 	2.8 (barem) dvije komponente
 		2.8.1 komponenta bez stanja, koristiti properties
 		2.8.2 komponenta sa stanjem
