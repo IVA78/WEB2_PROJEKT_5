@@ -30,7 +30,7 @@
                      a putanju "/blabla" ili bilo što drugo za 404 stranicu.
                      Preduvjet da radi u produkcijskom načinu bio je postavljanje 
                      Redirect and Rewrite Rules na Renderu (Source se postavi na /*,
-                     destination na /index.html, a Action na Redirect -> tako
+                     destination na /index.html, a Action na Rewrite -> tako
                      app zna sama hendlati zahtjeve)
 	2.8 (barem) dvije komponente
 		2.8.1 komponenta bez stanja, koristiti properties
