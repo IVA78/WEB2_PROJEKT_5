@@ -27,7 +27,9 @@
 		2.7.1. aplikacija mora biti bookmarkable, tako da rade linkovi 
 		2.7.2 dinamičko usmjeravanje s 404 stranicom ("catch all")
 	   Komentar: probati putanju "/about" za provjeru rade li svi linkovi, 
-                     a putanju "/blabla" ili bilo što drugo za 404 stranicu
+                     a putanju "/blabla" ili bilo što drugo za 404 stranicu.
+                     Neophodno je bilo dodavanje _redirects file-a: 
+		     https://stackoverflow.com/questions/56853081/vue-router-not-working-once-production-is-built
 	2.8 (barem) dvije komponente
 		2.8.1 komponenta bez stanja, koristiti properties
 		2.8.2 komponenta sa stanjem
@@ -57,4 +59,7 @@
                        asinkronog zahtjeva za podatcima nakon učitavanja stranice, 
                        primjer: WEB_2_PROJEKT_5\src\views\ProductsView.vue, linije 27-41
 
+Napomena: U console nema grešaka ili upozorenja (errors, warnings).
+          Kod postavljanja aplikacije (deloyment) koristi se production mode: npm run build (koristi se dist file)
+ 
 
